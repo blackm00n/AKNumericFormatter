@@ -10,4 +10,11 @@
 
 @property(nonatomic, strong) AKNumericFormatter* numericFormatter;
 
+-(void)formatCurrentText;
+
+// Method for iOS < 6 compatibility.
+// Call it from your UITextFieldDelegate's textField:shouldChangeCharactersInRange:replacementString: method
+// when replacementString's length is zero.
+-(void)alertDeleteBackwards;
+
 @end

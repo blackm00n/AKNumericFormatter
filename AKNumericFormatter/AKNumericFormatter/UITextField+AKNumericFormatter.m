@@ -54,28 +54,14 @@ static char UITextFieldIsFormatting;
   return [objc_getAssociatedObject(self, &UITextFieldIsFormatting) boolValue];
 }
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "InfiniteRecursion"
 -(void)deleteBackwardSwizzle
 {
-  if( self.numericFormatter ) {
-    UITextRange* selectedTextRange = self.selectedTextRange;
-    NSInteger caretStart = [self offsetFromPosition:self.beginningOfDocument toPosition:selectedTextRange.start];
-    NSInteger caretEnd = [self offsetFromPosition:self.beginningOfDocument toPosition:selectedTextRange.end];
-    if( caretStart != caretEnd ) {
-      self.text = [self.text stringByReplacingCharactersInRange:NSMakeRange((NSUInteger)caretStart, (NSUInteger)(caretEnd - caretStart))
-                                                     withString:@""];
-      self.selectedTextRange = [self textRangeFromPosition:selectedTextRange.start toPosition:selectedTextRange.start];
-    } else if( caretStart > 0 ) {
-      self.text = [self.text stringByReplacingCharactersInRange:NSMakeRange((NSUInteger)caretStart - 1, 1)
-                                                     withString:@""];
-      UITextPosition* newCaretPos = [self positionFromPosition:self.beginningOfDocument offset:caretStart - 1];
-      self.selectedTextRange = [self textRangeFromPosition:newCaretPos toPosition:newCaretPos];
-    }
-    self.handleDeleteBackwards = YES;
-    [self sendActionsForControlEvents:UIControlEventEditingChanged];
-  } else {
-    [self deleteBackwardSwizzle];
-  }
+  self.handleDeleteBackwards = YES;
+  [self deleteBackwardSwizzle];
 }
+#pragma clang diagnostic pop
 
 -(void)handleTextChanged:(NSNotification*)notification
 {
@@ -118,6 +104,20 @@ static char UITextFieldIsFormatting;
 
   self.isFormatting = NO;
   self.handleDeleteBackwards = NO;
+}
+
+-(void)formatCurrentText
+{
+  if( !self.numericFormatter ) {
+    return;
+  }
+  self.handleDeleteBackwards = NO;
+  [self handleTextChanged:nil];
+}
+
+-(void)alertDeleteBackwards
+{
+  self.handleDeleteBackwards = YES;
 }
 
 @end
