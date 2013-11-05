@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53A3F9311828529E00FA5FB8 /* NSString+AKNumericFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3457B6786F9D7EA25860E7 /* NSString+AKNumericFormatter.m */; };
+		AF34555712B28A8B2C527D23 /* NSString+AKNumericFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3457B6786F9D7EA25860E7 /* NSString+AKNumericFormatter.m */; };
+		AF34563EE44D0F96BB7B170A /* AKNumericFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF345523C90073D2CB02CD3B /* AKNumericFormatter.m */; };
+		AF345925ACE8B6D60A03AAF6 /* libAKNumericFormatter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF345ABC47CB9E7A2FE5A377 /* libAKNumericFormatter.a */; };
+		AF345D8C6A652541FE076938 /* AKNumericFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3450FFB0E83441526011AD /* AKNumericFormatterTests.m */; };
+		AF345E60C09BC674F97EAE59 /* AKNumericFormatter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF345EDC73432F8752F76B63 /* AKNumericFormatter.h */; };
+		AF345FAE59087B2F47C72CC4 /* UITextField+AKNumericFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF345C1239A7A5C68C92B98A /* UITextField+AKNumericFormatter.m */; };
+		AF345FDC43F21A78F7678DE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF3454E71EAB5904F9E9BC0D /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF3450E548EF305F0324563C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF345437FEE113DA3E99D66C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF3451776CFED768023559B6;
+			remoteInfo = AKNumericFormatter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF345E18261A068AB7B2CE66 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AF345E60C09BC674F97EAE59 /* AKNumericFormatter.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AF3450FFB0E83441526011AD /* AKNumericFormatterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKNumericFormatterTests.m; sourceTree = "<group>"; };
+		AF34516C0731CC2884FB1A2E /* NSString+AKNumericFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKNumericFormatter.h"; sourceTree = "<group>"; };
+		AF3451A2D5C94C282C5C0D3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF3453E7DAA01533EFB5FB13 /* AKNumericFormatterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "AKNumericFormatterTests-Info.plist"; sourceTree = "<group>"; };
+		AF345523C90073D2CB02CD3B /* AKNumericFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKNumericFormatter.m; sourceTree = "<group>"; };
+		AF34552EBC2BD20FFE810CE4 /* AKNumericFormatter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AKNumericFormatter-Prefix.pch"; sourceTree = "<group>"; };
+		AF3456CAFDC499245F08CEAC /* UITextField+AKNumericFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AKNumericFormatter.h"; sourceTree = "<group>"; };
+		AF3457B6786F9D7EA25860E7 /* NSString+AKNumericFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AKNumericFormatter.m"; sourceTree = "<group>"; };
+		AF345A2F6BC1B2C91B16AC1A /* AKNumericFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AKNumericFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF345ABC47CB9E7A2FE5A377 /* libAKNumericFormatter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAKNumericFormatter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF345C1239A7A5C68C92B98A /* UITextField+AKNumericFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AKNumericFormatter.m"; sourceTree = "<group>"; };
+		AF345EDC73432F8752F76B63 /* AKNumericFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKNumericFormatter.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF3453B13A1DBEE09AA012EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF3457AF96121AD3AF484BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF345925ACE8B6D60A03AAF6 /* libAKNumericFormatter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF34501A7CD01846A10FC257 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF34552EBC2BD20FFE810CE4 /* AKNumericFormatter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF34506A757257F740B0C825 = {
+			isa = PBXGroup;
+			children = (
+				AF3451F45FDAE749DFBDA8E3 /* Products */,
+				AF345E39CF3B4C3AA256B757 /* AKNumericFormatter */,
+				AF345BDE95B86E58B4C8C76B /* AKNumericFormatterTests */,
+			);
+			sourceTree = "<group>";
+		};
+		AF3451F45FDAE749DFBDA8E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF345ABC47CB9E7A2FE5A377 /* libAKNumericFormatter.a */,
+				AF345A2F6BC1B2C91B16AC1A /* AKNumericFormatterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF345975EFC668EC2A6D062B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF3453E7DAA01533EFB5FB13 /* AKNumericFormatterTests-Info.plist */,
+				AF3454E71EAB5904F9E9BC0D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF345BDE95B86E58B4C8C76B /* AKNumericFormatterTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF345975EFC668EC2A6D062B /* Supporting Files */,
+				AF3450FFB0E83441526011AD /* AKNumericFormatterTests.m */,
+			);
+			path = AKNumericFormatterTests;
+			sourceTree = "<group>";
+		};
+		AF345E39CF3B4C3AA256B757 /* AKNumericFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				AF34501A7CD01846A10FC257 /* Supporting Files */,
+				AF345EDC73432F8752F76B63 /* AKNumericFormatter.h */,
+				AF345523C90073D2CB02CD3B /* AKNumericFormatter.m */,
+				AF34516C0731CC2884FB1A2E /* NSString+AKNumericFormatter.h */,
+				AF3457B6786F9D7EA25860E7 /* NSString+AKNumericFormatter.m */,
+				AF345C1239A7A5C68C92B98A /* UITextField+AKNumericFormatter.m */,
+				AF3456CAFDC499245F08CEAC /* UITextField+AKNumericFormatter.h */,
+			);
+			path = AKNumericFormatter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF3451776CFED768023559B6 /* AKNumericFormatter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3459DFF48BDC9044D967BE /* Build configuration list for PBXNativeTarget "AKNumericFormatter" */;
+			buildPhases = (
+				AF345EDBD4A2490773BB0CAB /* Sources */,
+				AF3453B13A1DBEE09AA012EA /* Frameworks */,
+				AF345E18261A068AB7B2CE66 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AKNumericFormatter;
+			productName = AKNumericFormatter;
+			productReference = AF345ABC47CB9E7A2FE5A377 /* libAKNumericFormatter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AF345D1F2054770A6FDD2C6D /* AKNumericFormatterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF3454A82DB3D94C17275C6B /* Build configuration list for PBXNativeTarget "AKNumericFormatterTests" */;
+			buildPhases = (
+				AF3451474788292CDBAC0D53 /* Sources */,
+				AF3457AF96121AD3AF484BB4 /* Frameworks */,
+				AF345E2060982BD1897DAEA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF3455F14E70675BCF360FC4 /* PBXTargetDependency */,
+			);
+			name = AKNumericFormatterTests;
+			productName = AKNumericFormatterTests;
+			productReference = AF345A2F6BC1B2C91B16AC1A /* AKNumericFormatterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF345437FEE113DA3E99D66C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Aleksey Kozhevnikov";
+			};
+			buildConfigurationList = AF345A0A9A5DE462FED285D0 /* Build configuration list for PBXProject "AKNumericFormatter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AF34506A757257F740B0C825;
+			productRefGroup = AF3451F45FDAE749DFBDA8E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF3451776CFED768023559B6 /* AKNumericFormatter */,
+				AF345D1F2054770A6FDD2C6D /* AKNumericFormatterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF345E2060982BD1897DAEA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF345FDC43F21A78F7678DE6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF3451474788292CDBAC0D53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A3F9311828529E00FA5FB8 /* NSString+AKNumericFormatter.m in Sources */,
+				AF345D8C6A652541FE076938 /* AKNumericFormatterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF345EDBD4A2490773BB0CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF34563EE44D0F96BB7B170A /* AKNumericFormatter.m in Sources */,
+				AF34555712B28A8B2C527D23 /* NSString+AKNumericFormatter.m in Sources */,
+				AF345FAE59087B2F47C72CC4 /* UITextField+AKNumericFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF3455F14E70675BCF360FC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF3451776CFED768023559B6 /* AKNumericFormatter */;
+			targetProxy = AF3450E548EF305F0324563C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF3454E71EAB5904F9E9BC0D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF3451A2D5C94C282C5C0D3B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF345139BBBD675A652B4291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AKNumericFormatter/AKNumericFormatter-Prefix.pch";
+				INFOPLIST_FILE = "AKNumericFormatterTests/AKNumericFormatterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		AF34515084F33504F2653EAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/AKNumericFormatter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AKNumericFormatter/AKNumericFormatter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AF3453077F5234C0CC5A8153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF34586A59F3B8820F211D0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF345B7BA0B49D5CEE5C2F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/AKNumericFormatter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AKNumericFormatter/AKNumericFormatter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AF345BB2E145268599E02AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AKNumericFormatter/AKNumericFormatter-Prefix.pch";
+				INFOPLIST_FILE = "AKNumericFormatterTests/AKNumericFormatterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF3454A82DB3D94C17275C6B /* Build configuration list for PBXNativeTarget "AKNumericFormatterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF345139BBBD675A652B4291 /* Release */,
+				AF345BB2E145268599E02AE3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF3459DFF48BDC9044D967BE /* Build configuration list for PBXNativeTarget "AKNumericFormatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF345B7BA0B49D5CEE5C2F79 /* Release */,
+				AF34515084F33504F2653EAD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF345A0A9A5DE462FED285D0 /* Build configuration list for PBXProject "AKNumericFormatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF34586A59F3B8820F211D0F /* Release */,
+				AF3453077F5234C0CC5A8153 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF345437FEE113DA3E99D66C /* Project object */;
+}
