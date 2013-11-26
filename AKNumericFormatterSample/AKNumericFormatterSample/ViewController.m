@@ -10,9 +10,8 @@
 @interface ViewController()
 
 @property(nonatomic, weak) IBOutlet UITextField* textField;
-@property(nonatomic, weak) IBOutlet UIButton* button;
 
--(IBAction)buttonPressed:(id)sender;
+-(IBAction)segmentChanged:(UISegmentedControl*)sender;
 
 @end
 
@@ -26,11 +25,6 @@
 
 -(void)updateFormatterDependentUI
 {
-  if( self.textField.numericFormatter ) {
-    [self.button setTitle:@"Remove Formatter" forState:UIControlStateNormal];
-  } else {
-    [self.button setTitle:@"Add Formatter" forState:UIControlStateNormal];
-  }
   self.textField.placeholder = self.textField.numericFormatter.mask;
 }
 
@@ -39,12 +33,15 @@
   [super didReceiveMemoryWarning];
 }
 
--(IBAction)buttonPressed:(id)sender
+-(IBAction)segmentChanged:(UISegmentedControl*)sender
 {
-  if( self.textField.numericFormatter ) {
+  if( sender.selectedSegmentIndex == 0 ) {
     self.textField.numericFormatter = nil;
   } else {
-    self.textField.numericFormatter = [AKNumericFormatter formatterWithMask:@"TEL *(***)***-**-**" placeholderCharacter:'*'];
+    AKNumericFormatterMode mode = (sender.selectedSegmentIndex == 1 ? AKNumericFormatterMixed : AKNumericFormatterStrict);
+    self.textField.numericFormatter = [AKNumericFormatter formatterWithMask:@"+1(***)***-****"
+                                                       placeholderCharacter:'*'
+                                                                       mode:mode];
   }
   [self updateFormatterDependentUI];
 }

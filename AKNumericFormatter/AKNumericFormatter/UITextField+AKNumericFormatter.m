@@ -58,7 +58,7 @@ static char UITextFieldIsFormatting;
 #pragma ide diagnostic ignored "InfiniteRecursion"
 -(void)deleteBackwardSwizzle
 {
-  self.handleDeleteBackwards = YES;
+  [self alertDeleteBackwards];
   [self deleteBackwardSwizzle];
 }
 #pragma clang diagnostic pop
@@ -72,13 +72,15 @@ static char UITextFieldIsFormatting;
   self.isFormatting = YES;
 
   // Saving caret position
+  NSUInteger caretHeadOffset = (NSUInteger)[self offsetFromPosition:self.beginningOfDocument
+                                                          toPosition:self.selectedTextRange.start];
+  NSUInteger caretTailOffset = (NSUInteger)[self offsetFromPosition:self.selectedTextRange.end
+                                                        toPosition:self.endOfDocument];
   NSUInteger offsetDigitsCount = 0;
   if( self.handleDeleteBackwards ) {
-    NSInteger caretOffset = [self offsetFromPosition:self.beginningOfDocument toPosition:self.selectedTextRange.start];
-    offsetDigitsCount = [[self.text substringToIndex:(NSUInteger)caretOffset] countDecimalDigits];
+    offsetDigitsCount = [[self.text substringToIndex:caretHeadOffset] countDecimalDigits];
   } else {
-    NSInteger caretOffset = [self offsetFromPosition:self.selectedTextRange.end toPosition:self.endOfDocument];
-    offsetDigitsCount = [[self.text substringFromIndex:self.text.length - caretOffset] countDecimalDigits];
+    offsetDigitsCount = [[self.text substringFromIndex:self.text.length - caretTailOffset] countDecimalDigits];
   }
 
   // Format text
@@ -91,11 +93,14 @@ static char UITextFieldIsFormatting;
   } else {
     newCaretOffset = self.text.length - [self.text minSuffixLengthContainingDecimalDigitsCount:offsetDigitsCount];
   }
-  if( newCaretOffset < [self.numericFormatter.mask indexOfCharacter:self.numericFormatter.placeholderCharacter] ) {
+  if( newCaretOffset < [self.numericFormatter indexOfFirstDigitOrPlaceholderInMask] ) {
     newCaretOffset = self.text.length;
   }
   if( newCaretOffset < self.text.length ) {
-    if( [self.text rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet] options:0 range:NSMakeRange((NSUInteger)newCaretOffset, self.text.length - newCaretOffset)].location == NSNotFound ) {
+    NSCharacterSet* decimalDigits = [NSCharacterSet decimalDigitCharacterSet];
+    BOOL maskHasDigitsAfterCaret = [[self.numericFormatter.mask substringFromIndex:(NSUInteger)newCaretOffset] rangeOfCharacterFromSet:decimalDigits].location != NSNotFound;
+    BOOL textHasOnlyThrashAfterCaret  = [[self.text substringFromIndex:(NSUInteger)newCaretOffset] rangeOfCharacterFromSet:decimalDigits].location == NSNotFound;
+    if( textHasOnlyThrashAfterCaret || maskHasDigitsAfterCaret ) {
       self.text = [self.text substringToIndex:(NSUInteger)newCaretOffset];
     }
   }

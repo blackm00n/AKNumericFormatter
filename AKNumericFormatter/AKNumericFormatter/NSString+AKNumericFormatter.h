@@ -21,6 +21,6 @@
 // Shortcut
 -(NSUInteger)countDecimalDigits;
 
--(NSInteger)indexOfCharacter:(unichar)character;
+-(NSUInteger)indexOfCharacter:(unichar)character;
 
 @end

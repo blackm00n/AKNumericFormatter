@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,33 +17,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QXU-fJ-Lo9">
-                                <rect key="frame" x="20" y="28" width="280" height="30"/>
+                                <rect key="frame" x="20" y="64" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd0-CL-WWB">
-                                <rect key="frame" x="110" y="66" width="100" height="30"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5t8-jv-FmC">
+                                <rect key="frame" x="42" y="28" width="236" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Formatter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <segments>
+                                    <segment title="None"/>
+                                    <segment title="Mixed Fmt"/>
+                                    <segment title="Strict Fmt"/>
+                                </segments>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cWJ-3H-l0c"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="VRW-1m-UAm"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QXU-fJ-Lo9" firstAttribute="top" secondItem="TI9-Ie-KwT" secondAttribute="bottom" constant="20" symbolic="YES" id="3cL-C7-XI5"/>
                             <constraint firstAttribute="trailing" secondItem="QXU-fJ-Lo9" secondAttribute="trailing" constant="20" symbolic="YES" id="5X5-nz-r8k"/>
-                            <constraint firstItem="fd0-CL-WWB" firstAttribute="top" secondItem="QXU-fJ-Lo9" secondAttribute="bottom" constant="8" symbolic="YES" id="63N-x1-v6S"/>
+                            <constraint firstItem="QXU-fJ-Lo9" firstAttribute="top" secondItem="5t8-jv-FmC" secondAttribute="bottom" constant="8" symbolic="YES" id="Aq8-8y-fAQ"/>
+                            <constraint firstAttribute="centerX" secondItem="5t8-jv-FmC" secondAttribute="centerX" id="Bj7-UA-kpi"/>
                             <constraint firstItem="QXU-fJ-Lo9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="HtC-kK-Xn1"/>
-                            <constraint firstAttribute="centerX" secondItem="fd0-CL-WWB" secondAttribute="centerX" id="i9G-2J-X6J"/>
+                            <constraint firstItem="5t8-jv-FmC" firstAttribute="top" secondItem="TI9-Ie-KwT" secondAttribute="bottom" constant="20" symbolic="YES" id="ea4-ri-8hP"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="fd0-CL-WWB" id="Eg7-SO-zEH"/>
                         <outlet property="textField" destination="QXU-fJ-Lo9" id="cU5-61-Ygc"/>
                     </connections>
                 </viewController>

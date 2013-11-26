@@ -111,7 +111,7 @@
   }];
 }
 
--(NSInteger)indexOfCharacter:(unichar)character
+-(NSUInteger)indexOfCharacter:(unichar)character
 {
   for( NSUInteger i = 0; i < self.length; ++i ) {
     if( [self characterAtIndex:i] == character ) {
