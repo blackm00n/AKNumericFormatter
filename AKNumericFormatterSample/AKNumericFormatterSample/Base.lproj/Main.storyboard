@@ -21,6 +21,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="tP6-I3-ycH"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5t8-jv-FmC">
                                 <rect key="frame" x="42" y="28" width="236" height="29"/>
@@ -34,17 +37,28 @@
                                     <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="VRW-1m-UAm"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Format fulfilled: NO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-ht-tM6">
+                                <rect key="frame" x="20" y="102" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="g4a-ht-tM6" firstAttribute="top" secondItem="QXU-fJ-Lo9" secondAttribute="bottom" constant="8" symbolic="YES" id="3AJ-Ou-TC2"/>
                             <constraint firstAttribute="trailing" secondItem="QXU-fJ-Lo9" secondAttribute="trailing" constant="20" symbolic="YES" id="5X5-nz-r8k"/>
                             <constraint firstItem="QXU-fJ-Lo9" firstAttribute="top" secondItem="5t8-jv-FmC" secondAttribute="bottom" constant="8" symbolic="YES" id="Aq8-8y-fAQ"/>
                             <constraint firstAttribute="centerX" secondItem="5t8-jv-FmC" secondAttribute="centerX" id="Bj7-UA-kpi"/>
                             <constraint firstItem="QXU-fJ-Lo9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="HtC-kK-Xn1"/>
+                            <constraint firstAttribute="trailing" secondItem="g4a-ht-tM6" secondAttribute="trailing" constant="20" symbolic="YES" id="Uzd-Ks-9Tj"/>
                             <constraint firstItem="5t8-jv-FmC" firstAttribute="top" secondItem="TI9-Ie-KwT" secondAttribute="bottom" constant="20" symbolic="YES" id="ea4-ri-8hP"/>
+                            <constraint firstItem="g4a-ht-tM6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="ohD-DZ-Wso"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="formatFulfilledLabel" destination="g4a-ht-tM6" id="mbQ-rR-fUv"/>
                         <outlet property="textField" destination="QXU-fJ-Lo9" id="cU5-61-Ygc"/>
                     </connections>
                 </viewController>

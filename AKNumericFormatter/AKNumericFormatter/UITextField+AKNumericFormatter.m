@@ -84,7 +84,11 @@ static char UITextFieldIsFormatting;
   }
 
   // Format text
-  self.text = [self.numericFormatter formatString:self.text];
+  NSString* newText = [self.numericFormatter formatString:self.text];
+  if( ![self.text isEqualToString:newText] ) {
+    self.text = newText;
+    [self sendActionsForControlEvents:UIControlEventEditingChanged];
+  }
 
   // Restoring caret position
   NSInteger newCaretOffset = 0;
@@ -102,6 +106,7 @@ static char UITextFieldIsFormatting;
     BOOL textHasOnlyThrashAfterCaret  = [[self.text substringFromIndex:(NSUInteger)newCaretOffset] rangeOfCharacterFromSet:decimalDigits].location == NSNotFound;
     if( textHasOnlyThrashAfterCaret || maskHasDigitsAfterCaret ) {
       self.text = [self.text substringToIndex:(NSUInteger)newCaretOffset];
+      [self sendActionsForControlEvents:UIControlEventEditingChanged];
     }
   }
   UITextPosition* newCaretPosition = [self positionFromPosition:self.beginningOfDocument offset:newCaretOffset];

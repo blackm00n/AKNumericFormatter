@@ -10,6 +10,7 @@
 @interface ViewController()
 
 @property(nonatomic, weak) IBOutlet UITextField* textField;
+@property(nonatomic, weak) IBOutlet UILabel* formatFulfilledLabel;
 
 -(IBAction)segmentChanged:(UISegmentedControl*)sender;
 
@@ -26,6 +27,7 @@
 -(void)updateFormatterDependentUI
 {
   self.textField.placeholder = self.textField.numericFormatter.mask;
+  [self updateFormatFulfilledLabel];
 }
 
 -(void)didReceiveMemoryWarning
@@ -44,6 +46,22 @@
                                                                        mode:mode];
   }
   [self updateFormatterDependentUI];
+}
+
+-(IBAction)textFieldEditingChanged:(id)sender
+{
+  [self updateFormatFulfilledLabel];
+}
+
+-(void)updateFormatFulfilledLabel
+{
+  if( self.textField.numericFormatter ) {
+    BOOL isFormatFulfilled = [self.textField.numericFormatter isFormatFulfilled:self.textField.text];
+    self.formatFulfilledLabel.text = [NSString stringWithFormat:@"Format fulfilled: %@", (isFormatFulfilled ? @"YES" : @"NO")];
+    self.formatFulfilledLabel.hidden = NO;
+  } else {
+    self.formatFulfilledLabel.hidden = YES;
+  }
 }
 
 @end
